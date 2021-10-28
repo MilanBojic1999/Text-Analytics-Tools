@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  postApi: 'https://api.dandelion.eu/'
 };

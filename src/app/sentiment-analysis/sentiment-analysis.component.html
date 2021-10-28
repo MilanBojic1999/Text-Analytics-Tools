@@ -1,0 +1,33 @@
+<p>sentiment-analysis works!</p>
+
+<div class="col-8">
+  <textarea></textarea>
+
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col ">
+        <button mat-raised-button (click)="openDialog(mydialog2)"> Submit </button>
+      </div>
+      <div class="col d-flex flex-row-reverse">
+        <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item> English </button>
+          <button mat-menu-item> Italian</button>
+          <button mat-menu-item> Any </button>
+        </mat-menu>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #mydialog2>
+  <h5>Results:</h5>
+  <mat-dialog-content>
+    <h2 [ngStyle]="{'color': result | interpolation: -1:1}"> {{result}}</h2>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-flat-button matDialogClose> Dismiss </button>
+  </mat-dialog-actions>
+</ng-template>

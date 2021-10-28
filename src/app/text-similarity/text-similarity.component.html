@@ -1,0 +1,26 @@
+<p>text-similarity works!</p>
+
+<div class="container main-cont">
+  <div class="row align-items-center">
+    <div class="col-6">
+      <h4>Text1</h4>
+      <textarea></textarea>
+    </div>
+
+    <div class="col-6">
+      <h4>Text2</h4>
+      <textarea></textarea>
+    </div>
+  </div>
+  <button mat-raised-button style="margin: 2rem 0.5rem" (click)="openDialog(mydialog)"> Submit </button>
+</div>
+
+<ng-template #mydialog>
+  <h5>Results:</h5>
+  <mat-dialog-content>
+    <h2> {{result}}</h2>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-flat-button matDialogClose> Dismiss </button>
+  </mat-dialog-actions>
+</ng-template>

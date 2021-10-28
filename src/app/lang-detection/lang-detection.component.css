@@ -1,0 +1,18 @@
+
+.divide {
+  display: flex;
+  flex-direction: column;
+
+}
+
+textarea {
+  resize: none;
+  width: 550px;
+  height: 125px;
+  margin: 1rem 0;
+}
+
+button{
+  width: 75px;
+  margin: 1rem 0;
+}

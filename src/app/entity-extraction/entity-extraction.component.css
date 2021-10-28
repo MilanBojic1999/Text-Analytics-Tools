@@ -1,0 +1,19 @@
+
+.textarea-not-resizeable {
+  resize: none;
+  width: 100%;
+  height: 125px;
+}
+
+.first-div {
+  margin: 1.5rem;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-slider {
+  width: 275px;
+}
