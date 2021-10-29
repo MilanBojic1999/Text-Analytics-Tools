@@ -16,17 +16,25 @@ export class HomeComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (localStorage.getItem("dtoken")) {
+      this.curr_token = <string>localStorage.getItem("dtoken")
+    } else {
+      this.openDialog()
+    }
+
+  }
+
+  openDialog(): void {
     const dialog = this.dialog.open(TokenInputComponent,
       {
         width: '400px'
       })
 
-    dialog.afterClosed().subscribe(() =>{
+    dialog.afterClosed().subscribe(() => {
       if (localStorage.getItem("dtoken")) {
         this.curr_token = <string>localStorage.getItem("dtoken")
       }
     })
-
   }
 
 }
