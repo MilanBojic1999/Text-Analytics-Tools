@@ -5,6 +5,7 @@ import {EntityExtractionComponent} from "./entity-extraction/entity-extraction.c
 import {LangDetectionComponent} from "./lang-detection/lang-detection.component";
 import {SentimentAnalysisComponent} from "./sentiment-analysis/sentiment-analysis.component";
 import {TextSimilarityComponent} from "./text-similarity/text-similarity.component";
+import {HistoryComponent} from "./history/history.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "similarity",
     component: TextSimilarityComponent
+  },
+  {
+    path: "history",
+    component: HistoryComponent
   },
 ];
 

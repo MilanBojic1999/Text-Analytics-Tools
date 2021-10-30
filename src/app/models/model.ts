@@ -10,3 +10,13 @@ export interface IEntityExtraction {
   end:number;
   spot:string;
 }
+
+export interface ILanguageDetection {
+  lang:string;
+  confidence:number;
+}
+
+export interface ISentiment {
+  score:number;
+  type:string;
+}
