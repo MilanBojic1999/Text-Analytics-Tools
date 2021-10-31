@@ -10,6 +10,7 @@ export class HistoryService {
 
   constructor() {
     this.history = []
+    console.log("History is starting...")
   }
 
   postHistory(val:string,type:string){

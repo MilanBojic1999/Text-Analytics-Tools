@@ -24,17 +24,17 @@
 </div>
 
 <div [ngStyle]="{'display':showResultGet()}" >
-  <h4> Test one {{showResult}} </h4>
+  <h4> Number of enteries ({{results.length}}) </h4>
 
   <div *ngFor="let r of results">
     <h4>{{r.title}}</h4>
     <h6>{{r.label}}</h6>
 
-    <p *ngIf="abstract">{{r.abstract}}</p>
-    <img *ngIf="image" src="{{r.image.thumbnail}}" alt="This is image send by backend">
-    <div *ngIf="categories">
+    <p *ngIf="abstractShow">{{r.abstract}}</p>
+    <img *ngIf="imageShow" src="{{r.image.thumbnail}}" alt="This is image send by backend">
+    <div *ngIf="categoriesShow">
       <div *ngFor="let c of r.categories">
-        a ({{c}})
+        ° ({{c}})
       </div>
     </div>
     <br>

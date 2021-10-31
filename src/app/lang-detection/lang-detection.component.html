@@ -9,7 +9,7 @@
   <div *ngIf="showResult" >
     <div *ngFor="let r of result" class="lang-result">
       <h3>{{r.lang}}</h3>
-      With<h6>{{r.confidence*100}}%</h6>
+      With <h6>{{ceil(r.confidence*100)}}%</h6>
     </div>
   </div>
 </div>

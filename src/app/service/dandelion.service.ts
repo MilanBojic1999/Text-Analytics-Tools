@@ -21,7 +21,9 @@ export class DandelionService {
 
   private readonly apiUrl = environment.postApi;
 
-  constructor(private httpClient:HttpClient,private historyService:HistoryService) { }
+  constructor(private httpClient:HttpClient,private historyService:HistoryService) {
+    console.log("Dandalion line is connecting...")
+  }
 
   getEntityExtraction(text:string,min_conf:number,image:boolean,abstract:boolean,categories:boolean): Observable<IEntityExtraction[]> {
     let include = '' + (image? ',image': '') + (abstract? ',abstract':'') + (categories? ',categories':'');

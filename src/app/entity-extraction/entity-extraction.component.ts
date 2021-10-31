@@ -12,6 +12,9 @@ export class EntityExtractionComponent implements OnInit {
   image:boolean;
   abstract:boolean;
   categories:boolean;
+  imageShow:boolean;
+  abstractShow:boolean;
+  categoriesShow:boolean;
   min_confidence:number;
   text:string;
   showResult:boolean;
@@ -22,6 +25,9 @@ export class EntityExtractionComponent implements OnInit {
     this.image = false;
     this.abstract = false;
     this.categories = false;
+    this.imageShow = false;
+    this.abstractShow = false;
+    this.categoriesShow = false;
     this.min_confidence = 0.0;
     this.text = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. '
     this.results = [];
@@ -52,6 +58,9 @@ export class EntityExtractionComponent implements OnInit {
       max_result => {
         this.results = max_result
         console.log(this.results)
+        this.imageShow = this.image
+        this.abstractShow = this.abstract
+        this.categoriesShow = this.categories
         this.showResult = true
       }
     )

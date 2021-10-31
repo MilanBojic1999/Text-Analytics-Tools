@@ -25,6 +25,10 @@ export class LangDetectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ceil(num:number): number {
+    return  Math.floor(num)
+  }
+
   submit(): void{
     this.service.getLangDetection(this.text,this.clean).subscribe(res => {
       this.result = res
