@@ -1,7 +1,15 @@
 <p>lang-detection works!</p>
 
 <div class="divide">
-  <textarea></textarea>
-  <mat-checkbox> Clean </mat-checkbox>
-  <button mat-raised-button> Submit </button>
+  <textarea [(ngModel)]="text"></textarea>
+  <mat-checkbox [(ngModel)]="clean"> Clean </mat-checkbox>
+  <button mat-raised-button (click)="submit()"> Submit </button>
+
+
+  <div *ngIf="showResult" >
+    <div *ngFor="let r of result" class="lang-result">
+      <h3>{{r.lang}}</h3>
+      With<h6>{{r.confidence*100}}%</h6>
+    </div>
+  </div>
 </div>

@@ -15,6 +15,7 @@ export class HistoryService {
   postHistory(val:string,type:string){
     let time = new Date()
     let pp = `[${time.toLocaleTimeString()}] ${type.toUpperCase()} ${val}`
+    console.log(pp)
     this.history.push(pp)
   }
 

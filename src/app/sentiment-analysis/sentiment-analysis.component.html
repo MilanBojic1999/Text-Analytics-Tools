@@ -1,19 +1,19 @@
 <p>sentiment-analysis works!</p>
 
 <div class="col-8">
-  <textarea></textarea>
+  <textarea [(ngModel)]="text"></textarea>
 
   <div class="container">
     <div class="row align-items-end">
       <div class="col ">
-        <button mat-raised-button (click)="openDialog(mydialog2)"> Submit </button>
+        <button mat-raised-button (click)="submit(mydialog2)"> Submit </button>
       </div>
       <div class="col d-flex flex-row-reverse">
-        <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+        <button mat-raised-button [matMenuTriggerFor]="menu">{{name}}</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item> English </button>
-          <button mat-menu-item> Italian</button>
-          <button mat-menu-item> Any </button>
+          <button mat-menu-item (click)="setName('en')"> English </button>
+          <button mat-menu-item (click)="setName('it')"> Italian</button>
+          <button mat-menu-item (click)="setName('auto')"> Any </button>
         </mat-menu>
       </div>
     </div>

@@ -20,6 +20,7 @@ import {MatSliderModule} from "@angular/material/slider";
 import {MatMenuModule} from "@angular/material/menu";
 import { InterpolationPipe } from './pipes/interpolation.pipe';
 import { HistoryComponent } from './history/history.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HistoryComponent } from './history/history.component';
     FormsModule,
     MatCheckboxModule,
     MatSliderModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   exports: [ MatFormFieldModule, MatInputModule ],

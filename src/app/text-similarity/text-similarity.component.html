@@ -4,15 +4,15 @@
   <div class="row align-items-center">
     <div class="col-6">
       <h4>Text1</h4>
-      <textarea></textarea>
+      <textarea [(ngModel)]="text1"></textarea>
     </div>
 
     <div class="col-6">
       <h4>Text2</h4>
-      <textarea></textarea>
+      <textarea [(ngModel)]="text2"></textarea>
     </div>
   </div>
-  <button mat-raised-button style="margin: 2rem 0.5rem" (click)="openDialog(mydialog)"> Submit </button>
+  <button mat-raised-button style="margin: 2rem 0.5rem" (click)="submit(mydialog)"> Submit </button>
 </div>
 
 <ng-template #mydialog>

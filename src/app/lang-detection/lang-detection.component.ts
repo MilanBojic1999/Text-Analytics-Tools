@@ -1,5 +1,6 @@
-import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
+import {Component, OnInit} from '@angular/core';
+import {DandelionService} from "../service/dandelion.service";
+import {ILanguageDetection} from "../models/model";
 
 @Component({
   selector: 'app-lang-detection',
@@ -8,9 +9,29 @@ import {MatDialog} from "@angular/material/dialog";
 })
 export class LangDetectionComponent implements OnInit {
 
-  constructor() { }
+  text:string;
+  clean:boolean;
+  result:ILanguageDetection[];
+
+  showResult:boolean
+
+  constructor(private service:DandelionService) {
+    this.text = ""
+    this.clean = false
+    this.result = []
+    this.showResult = false
+  }
 
   ngOnInit(): void {
+  }
+
+  submit(): void{
+    this.service.getLangDetection(this.text,this.clean).subscribe(res => {
+      this.result = res
+      this.showResult = true
+
+    })
+
   }
 
 }
